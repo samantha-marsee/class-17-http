@@ -47,9 +47,11 @@ app.get('/api/documents.json', (req, res) => {
 })
 
 
+
+
 // TODO: 404 - not found
 app.use((req, res, next) =>{
-  return res.status(404)
+  return res.json({message: 'Not Found', status:404}).status(404)
 })
 
 
