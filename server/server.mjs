@@ -14,8 +14,8 @@ app.use(express.json());
 const publicPath = path.join(__dirname, 'public');
 
 // TODO: GET /index.html
-app.get('/index.html', (request, response) => {
-  response.sendFile(path.join(publicPath, '/index.html'))
+app.get('/', '/index.html', (request, response) => {
+  response.sendFile(path.join(publicPath, '/index.html')) // need to hard code /index.html if you want / and /index.html to point to the same thing
 })
 
 app.get('/styles/site.css', (req, res) =>{
