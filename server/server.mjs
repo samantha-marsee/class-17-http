@@ -21,7 +21,9 @@ app.get('/index.html', (request, response) => {
 
 
 // TODO: 404 - not found
-
+app.use((req, res, next) =>{
+  return res.status(404)
+})
 
 
 // 500 - Any server error
