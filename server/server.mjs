@@ -15,7 +15,7 @@ const publicPath = path.join(__dirname, 'public');
 
 // TODO: GET /index.html
 app.get('/index.html', (request, response) => {
-  response.sendFile(path.join(publicPath, '/index.html')).status(200)
+  response.sendFile(path.join(publicPath, '/index.html'))
 })
 
 
