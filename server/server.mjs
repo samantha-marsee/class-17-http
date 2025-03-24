@@ -1,7 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import 'dotenv/config';
-import express from 'express';
+import express, { response } from 'express';
 import cors from 'cors';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const port = process.env.PORT || 8080;
@@ -18,6 +18,9 @@ app.get('/index.html', (request, response) => {
   response.sendFile(path.join(publicPath, '/index.html'))
 })
 
+app.get('/styles/site.css', (req, res) =>{
+  res.sendFile(path.join(publicPath, req.route.path))
+})
 
 
 // TODO: 404 - not found
