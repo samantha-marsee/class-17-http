@@ -42,7 +42,7 @@ app.get('/api/documents.json', (req, res) => {
     supplier: "Tropical Imports",
     organic: false,
     country: "Ecuador",
-    expiration: new Date("2023-12-10")
+    expiration: new Date("2023-12-10") //query database next time so don't have to hard code
   }]).status(200)
 })
 

@@ -11,3 +11,14 @@ content-length: 338
 etag: W/"152-XkbXyMTlk8M5njHpV/XWWwNmOg4"
 date: Mon, 24 Mar 2025 15:18:10 GMT
 connection: close
+###
+GET http://localhost:8080/not-found.json
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+content-length: 36
+etag: W/"24-RsG65XcOe55liASwaaIyq1MokIg"
+date: Mon, 24 Mar 2025 15:22:38 GMT
+connection: close
